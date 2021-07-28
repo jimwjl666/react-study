@@ -1,22 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-
+import HookPage from './hooksComponent/h-useState'
+import EHookPage from './hooksComponent/h-effect';
+import UseMemoPage from './hooksComponent/h-useMemo';
+import UserReducerPage from './hooksComponent/h-useReducer'
+import UseContextFather from './hooksComponent/h-useContext'
+import UserReactRedux from './hooksComponent/h-useSelector'
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <HookPage />
+        <EHookPage />
+        <UseMemoPage />
+        <UserReducerPage />
+        <UseContextFather/>
+        <UserReactRedux/>
       </header>
     </div>
   );
