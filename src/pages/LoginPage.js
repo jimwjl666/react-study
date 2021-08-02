@@ -1,11 +1,11 @@
 import { useSelector,useDispatch } from 'react-redux'
 import { useState } from 'react'
 import {Redirect} from "react-router-dom";
+import {login} from '../actions/login'
 export default function LoginPage(props){
   console.log('props:',props)
   const [name,setName] = useState('w')
-  const user = useSelector((state)=>state.user)
-  console.log('user',user)
+  const user = useSelector(({user})=>user)
   const dispatch = useDispatch()
   const { isLogin,loading,err } = user
 
@@ -21,7 +21,8 @@ export default function LoginPage(props){
           value={name}
           onChange={e=>setName(e.target.value)}
         />
-        <button onClick={()=>{dispatch({type:'LOGIN_SUCCESS',payload:{id:1,name:'wjl'}})}}>点我</button>
+        <button onClick={()=>{dispatch(login({name}))}}>点我{loading?'加载中':''}</button>
+        <div>{err.msg}</div>
     </div>
   )
 }
