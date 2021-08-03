@@ -1,0 +1,249 @@
+{
+    "root": {
+        "data": {
+            "id": "cd9j6r9a0b40",
+            "created": 1627958676045,
+            "text": "index.js"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cd9j70flfi80",
+                    "created": 1627958696018,
+                    "text": "react-redux"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cd9j77asg4g0",
+                            "created": 1627958710965,
+                            "text": "Provider value={store}"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cd9j7x5bqzs0",
+                    "created": 1627958767231,
+                    "text": "store",
+                    "layout_mind_offset": {
+                        "x": 428,
+                        "y": 61
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cd9j8c3p3qg0",
+                            "created": 1627958799784,
+                            "text": "createStore",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cd9j8rklmzs0",
+                                    "created": 1627958833458,
+                                    "text": "combineReducers",
+                                    "note": "``` js\nimport {combineReducers,applyMiddleware,createStore} from 'redex'\n```"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cd9ja24h2000",
+                                            "created": 1627958934791,
+                                            "text": "reducers"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cd9j8wpwtcw0",
+                                    "created": 1627958844663,
+                                    "text": "applyMiddleWare(react-thunk)"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cd9jarx32sg0",
+                    "created": 1627958990941,
+                    "text": "service"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cd9jb93gn4o0",
+                            "created": 1627959028332,
+                            "text": "return promise"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cd9jaul1tqg0",
+                    "created": 1627958996744,
+                    "text": "actions",
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cd9jikft2vs0",
+                            "created": 1627959601572,
+                            "text": "调用service",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cd9jbswcpx40",
+                                    "created": 1627959071438,
+                                    "text": "dispatch({type:'',payload:{}})",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cd9jc9tvizk0",
+                                            "created": 1627959108293,
+                                            "text": "通过reducers修改state"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cd9jk9vqdtk0",
+                    "created": 1627959735319,
+                    "text": "app.js"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cd9jkdp6sqo0",
+                            "created": 1627959743630,
+                            "text": "Routes"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cd9jkx60a400",
+                                    "created": 1627959786006,
+                                    "text": "react-router-dom"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cd9jl0gyn9s0",
+                                            "created": 1627959793199,
+                                            "text": "BrowHistory as Router",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd9jo5u89ls0",
+                                                    "created": 1627960039978,
+                                                    "text": "switch",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cd9jo4doau80",
+                                                            "created": 1627960036800,
+                                                            "text": "Route"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cd9joiu7b1c0",
+                                                                    "created": 1627960068274,
+                                                                    "text": "path"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "cd9joyzljbc0",
+                                                                    "created": 1627960103429,
+                                                                    "text": "component"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "cd9jwpavh6w0",
+                                                                    "created": 1627960709256,
+                                                                    "text": "PrivteRoute.js 路由拦截",
+                                                                    "note": "``` js\nimport { Redirect,Route } from \"react-router-dom\";\nimport { useSelector } from \"react-redux\"\n\nexport default function PrivateRoute({path,component:Component,...rest}){\n  const user = useSelector((state)=>state.user)\n  const { isLogin } = user\n  return(\n    <Route\n      render = {\n        (props)=>isLogin?(<Component {...props}/>)\n        :(<Redirect to={{pathname:'/login',state:{from: props.location.pathname}}}/>)\n      }\n    />\n  )\n} \n\n```"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cd9jo9fo4i80",
+                                                    "created": 1627960047804,
+                                                    "text": "Link"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cd9jpfng8800",
+                                                            "created": 1627960139700,
+                                                            "text": "to"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cd9jpiaj2fk0",
+                                                            "created": 1627960145449,
+                                                            "text": "text"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd9jrallunk0",
+                                            "created": 1627960285433,
+                                            "text": "Router、switch、Route、Link"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
