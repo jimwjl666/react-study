@@ -1,0 +1,4 @@
+.dashbord {
+  flex:1;
+  overflow-y: scroll;
+}

@@ -1,0 +1,9 @@
+.side-bar {
+  background:rgba(0,0,0,0.5);
+  color:#fff;
+  width:160px;
+}
+.side-bar li {
+  padding: 10px;
+  border-bottom: 1px solid #000;
+}
