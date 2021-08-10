@@ -1,0 +1,108 @@
+{
+    "root": {
+        "data": {
+            "id": "cdfmbz5exgg0",
+            "created": 1628576908116,
+            "text": "react原理"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cdfmc8zck680",
+                    "created": 1628576929517,
+                    "text": "Virtual Dom",
+                    "note": "### 什么是虚拟dom\n* 用js对象来表示DOM的数据一种数据结构。\n* 由于本身DOM数据结构非常多，为了简化，在数据变动后生成虚拟dom做diff找出树变动以便于做最小的dom操作，提升性能。\n* 虚拟dom对象是原生DOM对象的最小化子集。\n"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cdfmhe9xxrs0",
+                            "created": 1628577332862,
+                            "text": "JSX",
+                            "note": "* jsx是React.createElement的语法糖。\n* react 16版本中需要babel转义，react 17中不再需要。"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdfmktbtahs0",
+                            "created": 1628577600720,
+                            "text": "reactDOM"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cdfml3aop9s0",
+                                    "created": 1628577622419,
+                                    "text": "render(vNode,container)"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cdfmm7gslug0",
+                    "created": 1628577709860,
+                    "text": "节点类型（常见）"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cdfmmz2d5fs0",
+                            "created": 1628577769938,
+                            "text": "文本节点"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdfmn2bysgw0",
+                            "created": 1628577777048,
+                            "text": "函数组件"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdfmn520nj40",
+                            "created": 1628577782977,
+                            "text": "类组件"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdfmn69q78g0",
+                            "created": 1628577785620,
+                            "text": "HTML标签节点"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cdfmcb12xko0",
+                    "created": 1628576933975,
+                    "text": "react Fiber",
+                    "note": "* 转化原本的树状vNode数据结构为链表模式（添加兄弟元素指针及子元素指向父元素指针）\n* 链表是一种可中断数据结构\n* 通过requestIdleCallback 解决任务调度问题，让浏览器在空闲时计算diff\n* 给每个任务添加优先级。"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cdfmcbl0ooo0",
+                    "created": 1628576935181,
+                    "text": "topic"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-purple",
+    "version": "1.4.43"
+}
