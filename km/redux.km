@@ -1,0 +1,135 @@
+{
+    "root": {
+        "data": {
+            "id": "cdgknk2rmcg0",
+            "created": 1628673733411,
+            "text": "redux"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cdgknr1y2mg0",
+                    "created": 1628673748599,
+                    "text": "createStore",
+                    "layout_right_offset": {
+                        "x": -7,
+                        "y": -63
+                    },
+                    "note": "``` javascript\nexport default function createStore(reducer, enhancer) {\n  if (enhancer) {\n    // enhancer 加强了dispatch 就是applymiddleware(mid1,mid2)\n    //执行dispatch的时候， 就是执行所有的中间件函数和store.dispatch\n    return enhancer(createStore)(reducer);\n  }\n\n  let currentState; //状态值\n  let currentListeners = [];\n  // get\n  function getState() {\n    return currentState;\n  }\n\n  // set state {}\n  function dispatch(action) {\n    currentState = reducer(currentState, action);\n    // state改变，执行订阅的函数\n    currentListeners.forEach((listener) => listener());\n    return action;\n  }\n\n  // 订阅和取消订阅必须要成对出现\n  function subscribe(listener) {\n    currentListeners.push(listener);\n    return () => {\n      const index = currentListeners.indexOf(listener);\n      currentListeners.splice(index, 1);\n    };\n  }\n\n  dispatch({type: \"RREEEEEEEE\"});\n\n  return {\n    getState,\n    dispatch,\n    subscribe,\n  };\n}\n\n\n```"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cdgkttvtehs0",
+                            "created": 1628674224944,
+                            "text": "参数1：reducer",
+                            "layout_right_offset": {
+                                "x": 0,
+                                "y": -45
+                            },
+                            "note": "``` javascript\nfunction countReducer(state = 0, action) {\n  switch (action.type) {\n    case \"ADD\":\n      return state + 1;\n    case \"MINUS\":\n      return state - action.payload || 1;\n    default:\n      return state;\n  }\n}\n```"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdgku0parl40",
+                            "created": 1628674239787,
+                            "text": "参数2：applyMiddleWare(mid1,mid2)",
+                            "note": "``` javascript\n// 执行并\nexport default function createStore(reducer, enhancer) {\n  if (enhancer) {\n    // enhancer 加强了dispatch\n    //执行dispatch的时候， 就是执行所有的中间件函数和store.dispatch\n    return enhancer(createStore)(reducer);\n  }\n```"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cdgl0j54abc0",
+                                    "created": 1628674750111,
+                                    "text": "return (createStore)=>(reducer)=>{}",
+                                    "note": "``` javascript\nfunction applyMiddleWare(...middleWare){\n\treturn (createStore)=>(reducer)=>{\n    \tconst store = createStore(reducer)\n        \n        const dispatch = store.dispatch\n        const midApi = {\n        \tgetState: store.getState,\n            dispatch:(action)=>dispatch(action)\n        }\n        \n        // 执行中间件，传入midApi\n        const chain = middlewares.map((mid)=>mid(midApi))\n   dispatch = compose(..chain)(store.dispatch)\n   return {...store,dispatch}\n    }\n}\n\n```"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cdgkoq9pjjc0",
+                    "created": 1628673825256,
+                    "text": "store.subscribe",
+                    "layout_right_offset": {
+                        "x": -2,
+                        "y": 39
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cdgkpk4lj8w0",
+                            "created": 1628673890250,
+                            "text": "添加监听，返回取消监听函数",
+                            "note": "``` javascript createStore实现\n // 订阅和取消订阅必须要成对出现\n  function subscribe(listener) {\n    currentListeners.push(listener);\n    return () => {\n      const index = currentListeners.indexOf(listener);\n      currentListeners.splice(index, 1);\n    };\n  }\n```"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cdgkp3el6ug0",
+                    "created": 1628673853849,
+                    "text": "store.dispatch",
+                    "layout_right_offset": {
+                        "x": 0,
+                        "y": 73
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cdgkqpeeba00",
+                            "created": 1628673980091,
+                            "text": "遍历监听数组，执行监听函数",
+                            "note": "``` javascript\n// set state {}\n  function dispatch(action) {\n    currentState = reducer(currentState, action);\n    // state改变，执行订阅的函数\n    currentListeners.forEach((listener) => listener());\n    return action;\n  }\n```"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cdgl5cqx73c0",
+                    "created": 1628675128012,
+                    "text": "中间件",
+                    "layout_right_offset": {
+                        "x": 1,
+                        "y": -194
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cdgl5jqe7pk0",
+                            "created": 1628675143218,
+                            "text": "react-logger",
+                            "note": "``` javascript\n// next 为传入的dispatch,执行最终的action\nfunction logger({getState,dispatch}){\n\treturn (next)=>(action)=>{\n    \tconsole.log('prev state', getState())\n    \tconsole.log(action.type+'执行了')\n        \n        const returnValue = next(action)\n        const nextState = getState()\n        console.log('next state', nextState)\n        return returnValue\n    }\n}\n```"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdgl5nburrs0",
+                            "created": 1628675151046,
+                            "text": "react-thunk",
+                            "note": "#### 核心是判断action是否为函数，如果为函数则执行函数传入(dispatch,getState)\n\n``` javascript\nfunction thunk({getState,dispatch}) {\n\treturn (next)=>(action)=>{\n    \tif(typeof action ==='fuction'){\n        \treturn action(dispatch,getState)\n        }\n        return next(action)\n    }\n\n}\n\n```\n\n"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
