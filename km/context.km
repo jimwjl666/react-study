@@ -1,0 +1,94 @@
+{
+    "root": {
+        "data": {
+            "id": "cdgbqkqtdgw0",
+            "created": 1628648579969,
+            "text": "context",
+            "note": "``` javascript\n//通过ContextWrapper以属性方式传递子组件以防止子组件重复渲染\nconst ContextWrapper = ({ children }) => {\nconst [count, setCount] =useState(0); return (\n\t<TestContext.Provider value={{ count, setCount }}>\n\t{children}\n\t</TestContext.Provider>\n);\n};\n```"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cdgbqthpdag0",
+                    "created": 1628648599009,
+                    "text": "创建：React.craeteContext()"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cdgbrtp9qmg0",
+                    "created": 1628648677830,
+                    "text": "使用：父组件 <ContextName.provider value={state}>"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cdgbstf0xbs0",
+                    "created": 1628648755575,
+                    "text": "子组件消费"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cdgbsxc0gtk0",
+                            "created": 1628648764100,
+                            "text": "static contextTpe = ContextName",
+                            "note": "类组件"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cdggl8b2oeg0",
+                                    "created": 1628662266624,
+                                    "text": "this.context"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cdgbsyiyyds0",
+                            "created": 1628648766697,
+                            "text": "<ContextName.Consumer>",
+                            "note": "类组件和函数组件"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cdggltwa3x40",
+                                    "created": 1628662313619,
+                                    "text": "{context=>{<><>}}"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cdgbt0v54xs0",
+                            "created": 1628648771787,
+                            "text": "const context = useContext(ContextName)",
+                            "note": "函数组件"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cdggmgzi9rc0",
+                                    "created": 1628662363880,
+                                    "text": "函数组件"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
