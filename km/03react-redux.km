@@ -1,0 +1,101 @@
+{
+    "root": {
+        "data": {
+            "id": "cdhb7fc0vt40",
+            "created": 1628748639228,
+            "text": "react-redux"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cdhb7xlmprs0",
+                    "created": 1628748678991,
+                    "text": "使用",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cdhbmrsw5e80",
+                            "created": 1628749841832,
+                            "text": "Provider",
+                            "note": "``` javascript\nimport ReactDOM from 'react-dom'\nimport { Provider } from 'react-redux'\n\nReactDOM.render(\n\t<Provider store={store}>\n    \t\t<App />\n    </Provider>\n)\n```",
+                            "layout": null
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdhb838mlq00",
+                            "created": 1628748691265,
+                            "text": "connect",
+                            "note": "``` javascript\nimport {connect} from 'react-redux'\n\n@connect(\n(state)=>{\n\treturn {num:state}\n},\n{\n\tadd:()=>{return {type:add}},\n    minus:()=>{return {type:'minus'}}\n}\n)\nclass MyCom extends Component{\n\trender(){\n    \tconst {num,add,minus,} = this.props;\n        return (<div></div>)\n    }\n}\n```",
+                            "layout": null
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdhb8gmohbc0",
+                            "created": 1628748720413,
+                            "text": "hooks",
+                            "note": "``` javascript\nimport {useDispatch, useSelector} from 'react-redux'\n\nexport default function Test(){\n\tconst count = useSelector(({count})=>count)\n    \n    const dispatch = useDispatch()\n    \n    const add = useCallback(()=>{\n    \tdispatch({type:'ADD'})\n    },[])\n}\n\n```",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cdhb80whrq00",
+                    "created": 1628748686178,
+                    "text": "实现",
+                    "layout": null,
+                    "note": "* 创建context\n* 使用context的Provider传递value\n* 子孙组件使用connect高阶组件消费context的Provider\n* useDispatch:从context中拿到dispatch \n* useSelector "
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cdhf4erkrk80",
+                            "created": 1628759687339,
+                            "text": "Provider",
+                            "note": "``` javascript\n\nconst Context = React.createContext()\n\nfunction Provider({store,children}) {\n\treturn <Context.Provider value={store}>{children}</Context.Provider>\n}\n```"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdhf4jimy880",
+                            "created": 1628759697682,
+                            "text": "connect",
+                            "note": "``` javascript\nconst connect = (mapStateToProps,mapDispatchToProps)=>(WrappedCop)=>(props)=>{\n\nconst store = useContext(Context)\nconst stateProps = mapStateToProps(store.getState)\n\nlet dispatchToprops = {dispatch:store.dispatch}\n\nif (typeof mapDispatchToProps === \"function\") {\n    dispatchProps = mapDispatchToProps(store.dispatch);\n  } else if (typeof mapDispatchToProps === \"object\") {\n    dispatchProps = bindActionCreators(mapDispatchToProps, store.dispatch);\n  }\n  const forceUpdate = useForceUpdate();\n\n  // dom__useEffect\n\n  useLayoutEffect(() => {\n    const unsubscribe = store.subscribe(() => {\n      // forceUpdate((prev) => prev + 1);\n      forceUpdate();\n    });\n    return () => {\n      // cleanup\n      unsubscribe();\n    };\n  }, [store]);\n   return <WrappedComponent {...props} {...stateProps} {...dispatchProps} />;\n\n}\n\n\n```"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdhf4ledn0o0",
+                            "created": 1628759701778,
+                            "text": "useDispatch",
+                            "note": "``` javascript\nexport function useDispatch(){\n\treturn useContext(Context).dispatch\n}\n\n```"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdhf4q0iqps0",
+                            "created": 1628759711824,
+                            "text": "useSelector",
+                            "note": "``` javascript\nfunction useForceUpdate() {\n  // const [state, forceUpdate] = useState(0);\n  const [, dispatch] = useReducer((x) => x + 1, 0);\n\n  const update = useCallback(() => {\n    dispatch();\n  }, []);\n\n  return update;\n}\n\n\nfunction useSelector(selector){\n\tconst store = useContext(Context)\n    const selectedState = selector(store.getState())\n    \n    //订阅更新\n    \n    const forceUpdate = useForceUpdate();\n\n  useLayoutEffect(() => {\n    const unsubscribe = store.subscribe(() => {\n      // forceUpdate((prev) => prev + 1);\n      forceUpdate();\n    });\n    return () => {\n      // cleanup\n      unsubscribe();\n    };\n  }, [store]);\n    \n    return selectedState;\n}\n```"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-purple",
+    "version": "1.4.43"
+}
