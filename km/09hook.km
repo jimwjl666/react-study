@@ -1,0 +1,161 @@
+{
+    "root": {
+        "data": {
+            "id": "cdhh6oxb63k0",
+            "created": 1628765508401,
+            "text": "Hook"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cdhh8e7o9js0",
+                    "created": 1628765641812,
+                    "text": "react",
+                    "layout_right_offset": {
+                        "x": -90,
+                        "y": -163
+                    },
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cdhh6ug0o6w0",
+                            "created": 1628765520416,
+                            "text": "useState"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdhh9atesww0",
+                            "created": 1628765712783,
+                            "text": "useReducer",
+                            "note": "* useState 的替代⽅案。\n* 它接收⼀个形如 (state, action) => newState 的 reducer，并返回当前的 state 以及与其配套的 dispatch ⽅法。\n* 如果你熟悉 Redux 的话，就已经知道它如何⼯作了。）"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdhh6ypikj40",
+                            "created": 1628765529698,
+                            "text": "useEffect",
+                            "note": "* 该 Hook 接收⼀个包含命令式、且可能有副作⽤代码的函数。\n\n* 改变 DOM、添加订阅、设置定时器、记录⽇志以及执⾏其他包含副作⽤\n\n* 默认情况下，effect 将在每轮渲染结束后执⾏，但你可以选择让它 在只有某些值改变的时候 才执⾏"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdhhvabthpc0",
+                            "created": 1628767435731,
+                            "text": "useLayoutEffect"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdhh7xyanz40",
+                            "created": 1628765606416,
+                            "text": "useContext"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdhh7sjuq080",
+                            "created": 1628765594659,
+                            "text": "useMemo",
+                            "expandState": "expand"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdhh7pv4s6g0",
+                            "created": 1628765588811,
+                            "text": "useContext"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdhha4cs1eo0",
+                            "created": 1628765777081,
+                            "text": "useRef"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdhhv4md0dc0",
+                            "created": 1628767423308,
+                            "text": "useImperativeHandle"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cdhh8vx1ecg0",
+                    "created": 1628765680351,
+                    "text": "react-router",
+                    "layout_right_offset": {
+                        "x": -64,
+                        "y": -52
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cdhh9n9zt600",
+                            "created": 1628765739907,
+                            "text": "useHistory"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdhh9q1qh7c0",
+                            "created": 1628765745938,
+                            "text": "useParams"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cdhh90l2ods0",
+                    "created": 1628765690511,
+                    "text": "react-redux",
+                    "layout_right_offset": {
+                        "x": -58,
+                        "y": 3
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cdhh9t86u0g0",
+                            "created": 1628765752859,
+                            "text": "useSelector"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdhh9wnba2g0",
+                            "created": 1628765760303,
+                            "text": "useDispatch"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

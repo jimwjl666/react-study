@@ -1,0 +1,205 @@
+{
+    "root": {
+        "data": {
+            "id": "cdkq8q0n4200",
+            "created": 1629095737367,
+            "text": "react 原理"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cdkq90ardbk0",
+                    "created": 1629095759747,
+                    "text": "render"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cdkvkdzpcyg0",
+                            "created": 1629110757108,
+                            "text": "workLoop"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cdkvpjohzjs0",
+                                    "created": 1629111161312,
+                                    "text": "performUnitOfWork",
+                                    "note": "*  深度优先构建Fiber节点树。\n"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cdkvqxn3wg00",
+                                    "created": 1629111270067,
+                                    "text": "commitRoot()"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cdkvspsqov40",
+                                            "created": 1629111409722,
+                                            "text": "commitWork(wipRoot)",
+                                            "note": "* 生成原生DOM节点"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cdkq9c8t44g0",
+                    "created": 1629095785750,
+                    "text": "调度策略 SchedulerDOM？？",
+                    "note": "* 浏览器api window.requestIdleCalllback\n* 自定义实现 scheduler.js"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cdkr644vgds0",
+                            "created": 1629098354115,
+                            "text": "push&pop&peek"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdkuf65czxs0",
+                            "created": 1629107527105,
+                            "text": "scheduler.js",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cdkuojbn1m80",
+                                    "created": 1629108261061,
+                                    "text": "schedule",
+                                    "expandState": "expand",
+                                    "note": "``` javascript\ntimerQueue.push(callback)\n\nMessageChannel  微任务\n\nconst postMessage = ()=>{\n\tcosnt {port1,port2} = new MessageChannel()\n    \n    port1.onmessage=()=>{\n    \tlet tem = timerQueue.splice(0.timerQuque.lengh)\n        \n    }\n}\n```"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cdkuo6k0s3s0",
+                                            "created": 1629108233269,
+                                            "text": "flushWork 执行任务",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cdkq9nng6s00",
+                    "created": 1629095810580,
+                    "text": "hook原理",
+                    "layout_right_offset": {
+                        "x": 6,
+                        "y": 16
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cdkw5kjrc3s0",
+                            "created": 1629112417029,
+                            "text": "链表存储hook",
+                            "note": "* 数组的地址是连续的\n* 链表地址不连续\n* 所以一定要保证hook顺序的稳定性。"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cdkq9y9ffrk0",
+                    "created": 1629095833677,
+                    "text": "reconciliation(协调)",
+                    "note": "* 虚拟DOM->真实DOM的过程。\n* 节点复用（key、type、层级一致）"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cdkqaiknskg0",
+                            "created": 1629095877891,
+                            "text": "diff"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cdkr0vo41wo0",
+                                    "created": 1629097943867,
+                                    "text": "新增"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cdkqcqv8dbs0",
+                                    "created": 1629096052673,
+                                    "text": "删除"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cdkr01g5jl40",
+                                    "created": 1629097878082,
+                                    "text": "替换"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cdkr03x0hso0",
+                                    "created": 1629097883455,
+                                    "text": "更新"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cdkr11uyd7c0",
+                                            "created": 1629097957341,
+                                            "text": "forceUpdate"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cdkr1f0kmd40",
+                                            "created": 1629097985979,
+                                            "text": "setState"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cdkr1hht14o0",
+                                            "created": 1629097991375,
+                                            "text": "ReactDom.render"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
