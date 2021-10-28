@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+
 import useClock from './h-auto';
 /* 
  副作用：
@@ -16,12 +17,16 @@ export default function EHookPage(props) {
     }, 0)
     return () => clearTimeout(timer) // 此处清除定时器、事件等
   }, [count])
+  const memoCount = useMemo(() => {
+    return dcount + 1
+  }, [dcount])
+  console.log('memoCount', memoCount)
   return (
     <div>
       <h1>EffectHook</h1>
-      <p>{count}</p>
-      <p>{dcount}</p>
-      <p>{useClock().toLocaleTimeString()}</p>
+      <p>count:{count}</p>
+      <p>dcount:{dcount}</p>
+      {/* <p>{useClock().toLocaleTimeString()}</p> */}
       <button onClick={() => setCount(count + 1)}>EHookPage</button>
     </div>
   )

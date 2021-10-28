@@ -1,0 +1,371 @@
+[{
+  "equipment1": {
+    "cLevel": 1,
+    "id": 41104302,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment2": {
+    "cLevel": 1,
+    "id": 41008052,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment3": {
+    "cLevel": 1,
+    "id": 41205192,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "hero": {
+    "cLevel": 1,
+    "id": 10000000,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "skin": {
+    "cLevel": 1,
+    "id": 49000004,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "weapon": {
+    "cLevel": 1,
+    "id": 40000008,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  }
+}, {
+  "equipment1": {
+    "cLevel": 1,
+    "id": 41104341,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment2": {
+    "cLevel": 1,
+    "id": 41104394,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment3": {
+    "cLevel": 1,
+    "id": 41004014,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "hero": {
+    "cLevel": 1,
+    "id": 10000001,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "skin": {
+    "cLevel": 1,
+    "id": 49000107,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "weapon": {
+    "cLevel": 1,
+    "id": 40000103,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  }
+}, {
+  "equipment1": {
+    "cLevel": 1,
+    "id": 41104332,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment2": {
+    "cLevel": 1,
+    "id": 41104397,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment3": {
+    "cLevel": 1,
+    "id": 41205110,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "hero": {
+    "cLevel": 1,
+    "id": 10000002,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "skin": {
+    "cLevel": 1,
+    "id": 49000200,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "weapon": {
+    "cLevel": 1,
+    "id": 40000200,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  }
+}, {
+  "equipment1": {
+    "cLevel": 1,
+    "id": 41004118,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment2": {
+    "cLevel": 1,
+    "id": 41105020,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment3": {
+    "cLevel": 1,
+    "id": 41104100,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "hero": {
+    "cLevel": 1,
+    "id": 10000003,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "skin": {
+    "cLevel": 1,
+    "id": 49000303,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "weapon": {
+    "cLevel": 1,
+    "id": 40000300,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  }
+}, {
+  "equipment1": {
+    "cLevel": 1,
+    "id": 41005701,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment2": {
+    "cLevel": 1,
+    "id": 41104204,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment3": {
+    "cLevel": 1,
+    "id": 41205060,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "hero": {
+    "cLevel": 1,
+    "id": 10000004,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "skin": {
+    "cLevel": 1,
+    "id": 49000402,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "weapon": {
+    "cLevel": 1,
+    "id": 40000402,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  }
+}, {
+  "equipment1": {
+    "cLevel": 1,
+    "id": 41404208,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment2": {
+    "cLevel": 1,
+    "id": 41404101,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment3": {
+    "cLevel": 1,
+    "id": 41304011,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "hero": {
+    "cLevel": 1,
+    "id": 10000008,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "skin": {
+    "cLevel": 1,
+    "id": 49000807,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "weapon": {
+    "cLevel": 1,
+    "id": 40000803,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  }
+}, {
+  "equipment1": {
+    "cLevel": 1,
+    "id": 41105501,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment2": {
+    "cLevel": 1,
+    "id": 41004013,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment3": {
+    "cLevel": 1,
+    "id": 41006600,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "hero": {
+    "cLevel": 1,
+    "id": 10000009,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "skin": {
+    "cLevel": 1,
+    "id": 49000906,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "weapon": {
+    "cLevel": 1,
+    "id": 40000902,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  }
+}, {
+  "equipment1": {
+    "cLevel": 1,
+    "id": 41005170,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment2": {
+    "cLevel": 1,
+    "id": 41107202,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment3": {
+    "cLevel": 1,
+    "id": 41005012,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "hero": {
+    "cLevel": 1,
+    "id": 10000011,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "skin": {
+    "cLevel": 1,
+    "id": 49001107,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "weapon": {
+    "cLevel": 1,
+    "id": 40001102,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  }
+}, {
+  "equipment1": {
+    "cLevel": 1,
+    "id": 41004387,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment2": {
+    "cLevel": 1,
+    "id": 41005400,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment3": {
+    "cLevel": 1,
+    "id": 41105401,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "hero": {
+    "cLevel": 1,
+    "id": 10000012,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "skin": {
+    "cLevel": 1,
+    "id": 49001209,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "weapon": {
+    "cLevel": 1,
+    "id": 40001203,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  }
+}, {
+  "equipment1": {
+    "cLevel": 1,
+    "id": 41205102,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment2": {
+    "cLevel": 1,
+    "id": 41004502,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "equipment3": {
+    "cLevel": 1,
+    "id": 41105600,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "hero": {
+    "cLevel": 1,
+    "id": 10000015,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "skin": {
+    "cLevel": 1,
+    "id": 49001508,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  },
+  "weapon": {
+    "cLevel": 1,
+    "id": 40001509,
+    "level": 1,
+    "properties": [1, 2, 3, 4, 5, 6]
+  }
+}]
