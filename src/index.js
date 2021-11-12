@@ -4,14 +4,10 @@ import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
-const jsx = (
-  <div>
-    <h2>111</h2>
-  </div>
-)
+
 
 ReactDOM.render(
-  jsx,
+  <App />,
   document.getElementById('root')
 );
 
