@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
-
-
+import { Observer } from "mobx-react"
+import LocalObservable from './mobxHooks/useLocalObservable'
 
 ReactDOM.render(
-  <App />,
+  <LocalObservable />,
   document.getElementById('root')
 );
 
