@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import { Observer } from "mobx-react"
 import { useStores } from './store'
-import { useWallet } from 'use-wallet'
+
 export default function App() {
   const { userStore } = useStores();
   /* const { account } = useWallet() */

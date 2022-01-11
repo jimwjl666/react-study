@@ -1,5 +1,6 @@
 import { observer, useLocalObservable, useLocalStore, useObserver } from "mobx-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { autorun, reaction } from 'mobx'
 /* 
 函数调用1
 const LocalObservable = observer(() => {
@@ -18,21 +19,41 @@ const LocalObservable = observer(() => {
 
 */
 
-const LocalObservable = () => {
-  const timer = useLocalStore(() => ({
+const LocalObservable = observer(() => {
+  const timer = useLocalObservable(() => ({
     secondsPassed: 0,
-    * increaseTimer() {
-      this.secondsPassed = yield new Promise((resolve) => {
-        setTimeout(() => {
-          resolve(1000)
-        }, 1000);
-      })
+    increaseTimer() {
+      this.secondsPassed++
     },
-    get computedSeconds() {
+
+    /* get computedSeconds() {
       return this.secondsPassed + 1
-    }
+    }, */
+
   }))
-  return useObserver(() => (<h1 onClick={timer.increaseTimer}>{timer.secondsPassed}{timer.computedSeconds}</h1>))
-}
+
+  useEffect(() => {
+    // 确保 autorun 方法只被初始化一次
+    autorun(() => {
+      console.log('进来了')
+      console.log(timer.secondsPassed)
+    })
+  }, [])
+
+  useEffect(() => {
+    reaction(
+      () => {
+        return timer.secondsPassed
+      },
+      (current, previous) => {
+        console.log('current', current)
+        console.log('previous', previous)
+      }
+    )
+  }, [])
+
+
+  return <h1 onClick={timer.increaseTimer}>{timer.secondsPassed}</h1>
+})
 
 export default LocalObservable;
